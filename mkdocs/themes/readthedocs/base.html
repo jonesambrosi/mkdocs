@@ -88,7 +88,11 @@
         {%- set navlevel = 1 %}
         {%- for nav_item in nav %}
             {%- if nav_item.is_section %}
-                <p class="caption"><span class="caption-text"><a class="{% if not nav_item.is_link %}reference internal{% endif %}{% if nav_item.active%} current{%endif%}" href="{% if not nav_item.is_section %}{{ nav_item.url|url }}{% else %}#{% endif %}">{{ nav_item.title }}</a></span></p>
+                {%- if nav_item.children %}
+                <p class="caption"><span class="caption-text">
+                  <a class="{% if not nav_item.children[0].is_link %}reference internal{% endif %}{% if nav_item.children[0].active%} current{%endif%}" href="{% if not nav_item.children[0].is_section %}{{ nav_item.children[0].url|url }}{% else %}#{% endif %}">{{ nav_item.title }}</a>
+                </span></p>
+                {% endif %}
                 {% if nav_item.active %}
                 <ul class="current">
                     {%- for nav_item in nav_item.children %}
