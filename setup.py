@@ -54,13 +54,13 @@ setup(
     packages=get_packages("mkdocs"),
     include_package_data=True,
     install_requires=[
-        'click>=3.3',
-        'Jinja2>=2.10.1',
-        'livereload>=2.5.1',
+        'click==7.1.1',
+        'Jinja2==2.11.1',
+        'livereload==(2.6.1',
         'lunr[languages]==0.5.6',  # must match lunr.js version included in search
-        'Markdown>=3.2.1',
-        'PyYAML>=3.10',
-        'tornado>=5.0'
+        'Markdown==3.2.1',
+        'PyYAML==5.3.1',
+        'tornado==6.0.4'
     ],
     python_requires='>=3.5',
     entry_points={
