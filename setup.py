@@ -56,7 +56,7 @@ setup(
     install_requires=[
         'click==7.1.1',
         'Jinja2==2.11.1',
-        'livereload==(2.6.1',
+        'livereload==2.6.1',
         'lunr[languages]==0.5.6',  # must match lunr.js version included in search
         'Markdown==3.2.1',
         'PyYAML==5.3.1',
